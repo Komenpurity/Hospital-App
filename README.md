@@ -1,21 +1,24 @@
-# Hospital App
+# README
 
-## Live Demo
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Description
-An app for a hospital 
+Things you may want to cover:
 
-## User Stories
+* Ruby version
 
-- A user can login
-- It records visits to a hospital
-- It collects details of a patient
-- There is a page for disbursing health information,immunization schedules
-- There is a user dashboard and also an admin dashboard with messages,news
+* System dependencies
 
-## Technologies
+* Configuration
 
-- ReactJs
+* Database creation
 
-## License
-MIT License
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
