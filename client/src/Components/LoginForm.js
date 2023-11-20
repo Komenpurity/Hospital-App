@@ -3,11 +3,10 @@ import React, { useState } from "react";
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [user,setUser] = useState("") 
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsLoading(true);
     fetch("/login", {
       method: "POST",
       headers: {
@@ -15,9 +14,8 @@ function LoginForm({ onLogin }) {
       },
       body: JSON.stringify({ username, password }),
     }).then((r) => {
-      setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => setUser(user)); 
       }
     });
   }
@@ -48,7 +46,7 @@ function LoginForm({ onLogin }) {
       </div>
       <div>
         <button className="btn btn-primary m-2" type="submit">
-          {isLoading ? "Loading..." : "Login"}
+          Login
         </button> 
       </div>
       

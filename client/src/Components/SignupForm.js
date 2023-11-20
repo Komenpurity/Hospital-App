@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 function SignUpForm({ onLogin }) {
   const [username, setUsername] = useState("");
-  const [password_digest, setPasswordDigest] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [bio, setBio] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState("")
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,15 +14,12 @@ function SignUpForm({ onLogin }) {
       },
       body: JSON.stringify({
         username,
-        password_digest,
-        image_url: imageUrl,
-        bio,
+        password,                         
       }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) =>{
-          onLogin(user)
-          console.log(user)
+          setUser(user) 
         });
       }
     });
@@ -48,29 +44,12 @@ function SignUpForm({ onLogin }) {
         <input className="form-control"
           type="password"
           id="password"
-          value={password_digest}
-          onChange={(e) => setPasswordDigest(e.target.value)}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         />
       </div>
-      <div className="form-group m-2">
-        <label htmlFor="imageUrl">Profile Image</label>
-        <input className="form-control"
-          type="text"
-          id="imageUrl"
-          value={imageUrl}
-          onChange={(e) => setImageUrl(e.target.value)}
-        />
-      </div>
-      <div className="form-group m-2">
-        <label htmlFor="bio">Bio</label>
-        <textarea className="form-control"
-          rows="2"
-          id="bio"
-          value={bio}
-          onChange={(e) => setBio(e.target.value)}
-        />
-      </div>
+     
       <div className="form-group">
         <button className="btn btn-primary m-2" type="submit">Sign Up</button> 
       </div>
