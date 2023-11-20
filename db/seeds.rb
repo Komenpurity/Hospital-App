@@ -1,2 +1,2 @@
-puth = User.create(username: 'Puth',password_digest:'1234')
-purity = User.create(username: 'Purity',password_digest: '1234') 
+puth = User.create(username: 'puth',password:'1234')
+purity = User.create(username: 'purity',password: '1234') 
