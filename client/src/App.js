@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Navbar from "./Components/Navbar";
 import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignupForm";
+import ConsultationForm from "./Components/ConsultationForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path = "/" element = {<Home/>}/> 
           <Route path = "/login" element = {<LoginForm/>}/> 
           <Route path = "/signup" element = {<SignUpForm/>}/> 
+          <Route path = "/consultation" element = {<ConsultationForm/>}/> 
          </Routes> 
       </BrowserRouter>
   );
