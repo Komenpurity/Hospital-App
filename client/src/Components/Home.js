@@ -1,14 +1,26 @@
 import React from 'react'
+import PharmacyCard from './PharmacyCard'
+import ConsultationCard from './ConsultationCard'
+import MaternityCard from './MaternityCard'
 
 export default function Home() {
   return (
-    <div>
+    <div className='container'>
         <div className='landing container'> 
-          <h1>Matter Hospital</h1>
+          <h1 className='display-1'>Matter Hospital</h1>
           <h3>Virtual Consultation</h3>
           <p>Talk with qualified doctors now</p>
-          <button>Book an Appointment now</button>
+          <button className="btn btn-primary" type='submit'>Book an Appointment now</button>
         </div>
+
+        <main>
+          <div className='row m-3'>
+            <PharmacyCard />
+            <ConsultationCard />
+            <MaternityCard />
+          </div>
+          
+        </main>
     </div>
   )
 }
