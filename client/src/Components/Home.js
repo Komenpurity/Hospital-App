@@ -2,6 +2,8 @@ import React from 'react'
 import PharmacyCard from './PharmacyCard'
 import ConsultationCard from './ConsultationCard'
 import MaternityCard from './MaternityCard'
+import AboutUs from './AboutUs'
+import Footer from './Footer'
 
 export default function Home() {
   return (
@@ -19,6 +21,12 @@ export default function Home() {
             <ConsultationCard />
             <MaternityCard />
           </div>
+
+          <div>
+            <AboutUs />
+          </div>
+
+          <Footer />
           
         </main>
     </div>
