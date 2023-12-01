@@ -5,7 +5,7 @@ export default function ConsultationCard() {
   return (
     <div className="card col-4 bg-info text-dark"> 
         <h6 className='display-6'>Telemedicine</h6> 
-        <h7 className='display-7'>Virtual Consultation</h7>
+        <h6 className='display-6'>Virtual Consultation</h6>
         <div className="card-body">
             <blockquote className="blockquote">
                 <p>Dont delay your health concerns.</p>

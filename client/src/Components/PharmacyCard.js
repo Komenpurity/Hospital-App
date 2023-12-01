@@ -4,7 +4,7 @@ export default function PharmacyCard() {
   return (
     <div className="card col-4 bg-light text-dark">
         <h6 className='display-6'>Pharmacy Services</h6> 
-        <h7 className='display-7'>Pharmacy Delivery</h7>
+        <h6 className='display-6'>Pharmacy Delivery</h6>
         <div className="card-body">
             <p className="card-text">Follow procurement steps below:</p>
             <ol> 
